@@ -34,11 +34,13 @@ formulario.addEventListener('submit', (e)=>{
   anim.classList.add('icon-carr')
 
   callAuth()
+
 })
 async function callAuth(){
 
   let frag = String(window.location.hash)
   let tokken = frag.slice(54,270)
+  console.log(tokken)
 
   const linkPlanilha = '18IwAfmhFimL3vO4JG81ZJPUxGJmsI2A_QUD0U93qBLI'
   const range = 'sheet1!A2'
@@ -52,7 +54,7 @@ async function callAuth(){
   
   const options = {
     'method': 'POST',
-
+    'mode': 'no-cors',
     'headers':{
       'Content-Type': "applications/json",
       'Authorizations': `Bearer ${tokken}`
