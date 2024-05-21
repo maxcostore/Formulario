@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/styles/formulario.css">
+</head>
+<body>
+    <div class="conteiner">
+        <div class="form-section">
+            <header>Formulário</header>
+            <form>
+                <input id="nf" name="nf" type="number" placeholder="NF">
+                <input id="sku" name="sku" type="text" placeholder="SKU">
+                <input id="custo" name="custo" type="number" placeholder="Custo">
+                <input id="desconto" name="desconto" type="number" placeholder="Desconto">
+                <textarea name="descricao" id="descricao" placeholder="Descrição"></textarea>  
+                <input class="" type="submit" id="sub" value="Enviar"> 
+                <p class="aaa"></p>           
+            </form>
+        </div>
+        
+        <div class="fix-section">
+            <header>Tipo de ajuste</header>
+            <form>
+                <p>
+                    <input type="checkbox" name="fixo">
+                    Fixo
+                </p>
+                <p>
+                    <input type="checkbox" name="temporario">
+                    Temporario
+                </p>
+                <input type="date" name="data">
+            </form>
+        </div>
+    </div>
+    <script src="/scripts/formulario.js" defer></script>
+</body>
+</html>

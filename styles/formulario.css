@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    background-color: #c3c3c3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.conteiner{
+    scale: 0.65;
+    position: relative;
+    width: 500px;
+    height: 700px;
+    border: 1px solid #000;
+    box-shadow: 0px 8px 5px rgba(0,0,0, 0.8);
+    border-radius: 15px;
+    background-color: #9e58a4;
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.conteiner header{
+    cursor: pointer;
+}
+.form-section{
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: initial;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+    height: 100%;
+}
+.form-section header{
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+    padding-bottom: 2rem;
+}
+.form-section form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+.form-section form input{
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: 600;
+    background-color: #ffffff6d;
+    font-size: 14px;
+    width: 100%;
+    cursor: pointer;
+}
+.form-section form textarea{
+    height: 5rem;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: 600;
+    background-color: #ffffff6d;
+    font-size: 14px;
+    width: 100%;
+}
+.form-section form input:nth-child(6){
+    width: 100%;
+    padding: 10px 15px;
+    margin-top: 2rem;
+    background-color: #ccc;
+    color: #000;
+    border: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all ease .3s;
+    border-radius: 8px;
+}
+.form-section form input:nth-child(6):hover{
+    color: #fff;
+    background-color: #5a5a5a;
+}
+.fix-section{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 88%;
+    height: 100%;
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    transition: all ease .6s;
+    background: linear-gradient(#2d2d2d 1%,#595959 60%, #ccc 100%);
+    opacity: 0.6;
+    border-radius: 100px 100px 0px 0px;
+    cursor: pointer;
+}
+.fix-section header{
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: .5rem;
+    padding-bottom: 2rem;
+}
+.fix-section form{
+    display: flex;
+    flex-direction: column;
+    align-items:start;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin-left: 250px;
+}
+.fix-section form input{
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    color: #000;
+
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #ffffff6d;
+}
+.fix-section form input:nth-child(3){
+    height: 3rem;
+    font-size: 18px;
+    width: 50%;
+}
+.fix-section form p{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: #fff;
+}
+.fix-section button{
+    margin-top: 2rem;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+}
+.fix-section button:hover{
+    border: 1px solid #fff;
+    background-color: #ccc;
+}
+.clicado{
+    top: 70%;
+    border-radius: 50px 50px 0px 0px;
+    width: 100%;
+    opacity: 1;
+}
+.icon-carr{
+    position: relative;
+    background-image: url("/assets/images/icon\ caregamento.png");
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    animation: loading .5s linear infinite;
+    z-index: 2;
+    bottom: 60px;
+}
+@keyframes loading{
+    0%{
+        transform: rotateZ(0deg) ;
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+}
