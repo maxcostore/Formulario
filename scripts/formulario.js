@@ -20,27 +20,28 @@ function dataForms(){
 
   return [nNF, nSKU, nCUSTO, nDESCONTO, nDESCRICAO]
 }
+
 // ação ao clicar em enviar
 let formulario = document.querySelector('form')
 formulario.addEventListener('submit', (e)=>{
   e.preventDefault()
-  dataForms().forEach((i) => {
-    console.log(i);
+  dataForms().forEach((i) => {  
+    console.log(i); // pega os dados do forms
   })
+
   //adicionar animação do botão de enviar
   let anim = document.querySelector('.aaa')
   let su = document.querySelector('#sub')
   su.value = ""
   anim.classList.add('icon-carr')
-
-  callAuth()
-
-})
-async function callAuth(){
-
+  
   let frag = String(window.location.hash)
-  let tokken = frag.slice(54,270)
+  let tokken = frag.slice(14,231)
   console.log(tokken)
+
+  postSheet(tokken)
+})
+async function postSheet(tk){
 
   const linkPlanilha = '18IwAfmhFimL3vO4JG81ZJPUxGJmsI2A_QUD0U93qBLI'
   const range = 'sheet1!A2'
@@ -57,7 +58,7 @@ async function callAuth(){
     'mode': 'no-cors',
     'headers':{
       'Content-Type': "applications/json",
-      'Authorizations': `Bearer ${tokken}`
+      'Authorizations': `Bearer ${tk}`
     },
 
     'payload': payload
