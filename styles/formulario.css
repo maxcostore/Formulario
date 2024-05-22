@@ -165,7 +165,7 @@ body{
 }
 .icon-carr{
     position: relative;
-    background-image: url("/assets/images/icon_caregamento.png");
+    background-image: url("assets/images/icon_caregamento.png");
     background-size: cover;
     width: 40px;
     height: 40px;
